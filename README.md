@@ -4,4 +4,4 @@ The UI design is from Elzero Web School and its playlist from [Here](https://www
 and [project files](https://elzero.org/html-css-practice-template-three/) 
 
 ## Deployed version using Github Pages
-[page link]()
+[page link](https://ziad-elshrief.github.io/HTML-CSS-Template3/)
