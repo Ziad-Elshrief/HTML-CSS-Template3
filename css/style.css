@@ -12,6 +12,10 @@ ul {
     margin: 0px;
 }
 
+input {
+    caret-color: var(--main-color);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -1119,7 +1123,6 @@ header menu li a i {
     width: 380px;
     outline: none;
     margin-right: 20px;
-    caret-color: var(--main-color);
 }
 
 .events input[type="email"]:focus::placeholder {
@@ -1299,6 +1302,81 @@ header menu li a i {
     padding: var(--section-padding) 0px;
 }
 
+.top-videos .video-content {
+    margin-top: 80px;
+    display: flex;
+}
+
+/* Medium */
+@media (max-width: 991px) {
+    .top-videos .video-content {
+        flex-direction: column;
+    }
+}
+
+.top-videos .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e2e2e2;
+}
+
+.top-videos .video img {
+    max-width: 100%;
+}
+
+.top-videos .video label {
+    display: block;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.top-videos .video-menu {
+    min-width: 300px;
+    background-color: #f4f4f4;
+    position: relative;
+    padding: 20px 0;
+    border: 1px solid #e2e2e2;
+    border-left: none;
+}
+
+/* Medium */
+@media (max-width: 991px) {
+    .top-videos .video-menu {
+        border-left: 1px solid #e2e2e2;
+    }
+}
+
+.top-videos .video-menu i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.top-videos .video-menu h2 {
+    margin: 0 20px 20px;
+    font-size: 18px;
+}
+
+.top-videos .video-menu li {
+    border-top: 1px solid #e2e2e2;
+    background-color: #ffffff;
+    padding: 20px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.top-videos .video-menu li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+
+.top-videos .video-menu span {
+    display: block;
+    color: #777;
+}
+
 .stats {
     padding: var(--section-padding) 0px;
     background-image: url(../images/stats.jpg);
@@ -1386,4 +1464,133 @@ header menu li a i {
     font-weight: bold;
     font-style: italic;
     font-size: 20px;
+}
+
+.discount {
+    display: flex;
+}
+
+/* Medium */
+@media (max-width: 991px) {
+    .discount {
+        flex-direction: column;
+    }
+}
+
+.discount h2 {
+    font-size: 36px;
+    margin: 30px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.discount .content {
+    background-color: var(--main-color-alt);
+    padding: 50px 0;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    color: #ffffff;
+}
+
+.discount .content>* {
+    position: relative;
+    z-index: 4;
+}
+
+.discount .content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-image: url(../images/discount-background2.jpg);
+    background-size: cover;
+    opacity: 0.03;
+}
+
+.discount .content::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-image: url(../images/discount-background1.jpg);
+    background-size: cover;
+    animation: show-hide 3s both alternate infinite;
+}
+
+@keyframes show-hide {
+    from {
+        opacity: 0.02;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.discount .content p {
+    text-wrap: balance;
+    margin: 20px 0 40px;
+    max-width: 80%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.discount .content img {
+    width: 300px;
+}
+
+.discount .request {
+    flex-basis: 50%;
+}
+
+.discount .request form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount .request input,
+.discount .request textarea {
+    width: 300px;
+    display: block;
+    outline: none;
+    border: none;
+    margin: 0 0 20px;
+}
+
+.discount .request input:not([type="submit"]),
+.discount .request form textarea {
+    padding: 15px;
+    background-color: #f6f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.discount .request form textarea {
+    height: 200px;
+    resize: none;
+    caret-color: var(--main-color);
+}
+
+.discount .request input[type="submit"] {
+    background-color: var(--main-color);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.discount input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
 }
