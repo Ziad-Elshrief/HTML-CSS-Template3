@@ -1336,7 +1336,6 @@ header menu li a i {
     min-width: 300px;
     background-color: #f4f4f4;
     position: relative;
-    padding: 20px 0;
     border: 1px solid #e2e2e2;
     border-left: none;
 }
@@ -1355,7 +1354,7 @@ header menu li a i {
 }
 
 .top-videos .video-menu h2 {
-    margin: 0 20px 20px;
+    margin: 20px 20px;
     font-size: 18px;
 }
 
@@ -1593,4 +1592,112 @@ header menu li a i {
 
 .discount input[type="submit"]:hover {
     background-color: var(--main-color-alt);
+}
+
+footer {
+    padding: 70px 0;
+    background-color: #191919;
+    color: #b9b9b9;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* Small */
+@media (max-width: 767px) {
+    footer .container {
+        text-align: center;
+    }
+}
+
+footer .site h2 {
+    margin: 0 0 30px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+footer .site a {
+    display: inline-block;
+    text-align: center;
+    background-color: #313131;
+    font-size: 20px;
+    color: #b9b9b9;
+    padding: 15px 0;
+    width: 50px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer .site a:first-of-type:hover {
+    background-color: #1877F2;
+}
+
+footer .site a:nth-of-type(2):hover {
+    background-color: #000000;
+}
+
+footer .site a:last-of-type:hover {
+    background-color: #FF0000;
+}
+
+footer ul li {
+    padding: 10px 0;
+    transition: all 0.3s;
+}
+
+footer ul li:hover a {
+    padding-left: 10px;
+    color: #ffffff;
+}
+
+footer ul li a {
+    color: #b9b9b9;
+    text-decoration: none;
+}
+
+footer ul li i {
+    color: var(--main-color);
+}
+
+footer ul li:not(:last-of-type) {
+    border-bottom: 1px solid #666;
+}
+
+footer .info {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Small */
+@media (max-width: 767px) {
+    footer .info {
+        grid-template-columns: 1fr
+    }
+}
+
+footer .info p,
+footer .info address {
+    margin: 0 0 10px;
+    line-height: 1.6;
+}
+
+footer .info i {
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+footer .gallery-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+    gap: 5px;
+}
+
+footer .gallery-content img { 
+   width: 100%;
+    border: 4px solid #ffffff;
 }
