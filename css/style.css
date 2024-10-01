@@ -1337,14 +1337,6 @@ header menu li a i {
     background-color: #f4f4f4;
     position: relative;
     border: 1px solid #e2e2e2;
-    border-left: none;
-}
-
-/* Medium */
-@media (max-width: 991px) {
-    .top-videos .video-menu {
-        border-left: 1px solid #e2e2e2;
-    }
 }
 
 .top-videos .video-menu i {
@@ -1595,7 +1587,7 @@ header menu li a i {
 }
 
 footer {
-    padding: 70px 0;
+    padding: 70px 0 0;
     background-color: #191919;
     color: #b9b9b9;
 }
@@ -1697,7 +1689,18 @@ footer .gallery-content {
     gap: 5px;
 }
 
-footer .gallery-content img { 
-   width: 100%;
+footer .gallery-content img {
+    width: 100%;
     border: 4px solid #ffffff;
+}
+
+footer .copyrights {
+    padding: 30px;
+    margin-top: 70px;
+    text-align: center;
+    border-top: 1px solid #313131;
+}
+
+footer .copyrights span {
+    color: var(--main-color);
 }
