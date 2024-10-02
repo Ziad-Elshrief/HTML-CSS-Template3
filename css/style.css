@@ -294,9 +294,6 @@ header menu li a i {
     padding-right: 10px;
 }
 
-
-
-
 .landing {
     background-color: var(--section-background);
     position: relative;
@@ -349,12 +346,6 @@ header menu li a i {
 }
 
 @keyframes up-down {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
     50% {
         transform: translate(0, -15%);
     }
@@ -475,15 +466,10 @@ header menu li a i {
 
 .articles .article:hover a::after {
     animation: right-left 0.5s infinite;
-
 }
 
 @keyframes right-left {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
+    50%{
         transform: translateX(50%);
     }
 }
@@ -491,6 +477,7 @@ header menu li a i {
 .gallery {
     background-color: var(--section-background);
     padding: var(--section-padding) 0px;
+    position: relative;
 }
 
 .gallery .gallery-content {
@@ -746,17 +733,39 @@ header menu li a i {
     position: absolute;
     left: 20%;
     top: -50px;
-    z-index: -1;
+    z-index: -2;
     height: calc(100% + 50px);
     width: 80%;
     background-color: #ececec;
     border-radius: 6px;
 }
 
+.team .member-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    z-index: -1;
+    height: calc(100% + 50px);
+    width: 0;
+    background-color: #adabab;
+    opacity: 0.8;
+    border-radius: 6px;
+    transition: width 0.3s;
+}
+
+.team .member-card:hover::after {
+    width: 80%;
+}
+
 .team .member-card img {
     width: 80%;
     border-radius: 6px;
     max-width: 500px;
+}
+
+.team .member-card:hover img {
+    filter: grayscale(1);
 }
 
 .team .member-card h2 {
@@ -773,6 +782,7 @@ header menu li a i {
     position: absolute;
     top: 50%;
     right: 10%;
+    z-index: 3;
     transform: translate(50%, -50%);
 }
 
